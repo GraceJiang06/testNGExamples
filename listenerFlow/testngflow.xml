@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestNG flow Suite" parallel="false">
+    <listeners>
+        <listener class-name="com.testNG.TestNGFlowListener" />
+    </listeners>
+
+    <test name="Test 1">
+        <classes>
+            <class name="com.testNG.SampleTest0"/>
+        </classes>
+    </test>
+</suite>
