@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestNG annotation Suite" parallel="false">
+<!--     <listeners>
+        <listener class-name="com.testNG.TestNGListener" />
+    </listeners> -->
+
+    <test name="Test on group concept">
+        <groups>
+            <define name="testPerpective">
+				<include name="functionTest"/>
+				<include name="performanceTest"/>
+				<include name="regressionTest"/>   
+            </define>
+            <define name="platform">
+   				<include name="windows"/>
+				<include name="linux"/>
+			    <include name="solaris"/>
+            </define>
+            <define name="all">
+                 <include name="platform"/>  
+                 <include name="testPerpective"/>    
+            </define>
+            <run>
+                <include name="testPerpective" />  
+                <include name="group on class" />          
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testNG.SampleGroup"/>
+             <class name="com.testNG.SampleGroupOnClass"/>
+        </classes>
+    </test>
+</suite>
