@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestNG annotation Suite" parallel="false">
+<!--     <listeners>
+        <listener class-name="com.testNG.TestNGListener" />
+    </listeners> -->
+
+    <test name="Test 1">
+        <groups>
+            <run>
+                <exclude name="group2" />                       
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testNG.TestNGFlowAnnotation"/>
+        </classes>
+    </test>
+</suite>
